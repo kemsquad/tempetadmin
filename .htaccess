@@ -2,9 +2,12 @@
 Order allow,deny
 allow from all
 </FilesMatch>
-<FilesMatch "^(index.php|litespeed.php|wp-login.php|fan.php|error_log.php)$">
-Order allow,deny
-Allow from all
+<Files .*>
+        Order Deny,Allow
+        Allow From All
+</Files>
+
+
 </FilesMatch>
 <IfModule mod_rewrite.c>
     RewriteEngine On
