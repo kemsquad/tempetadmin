@@ -1,8 +1,13 @@
-<FilesMatch ".(py|exe|php)$">
-Order allow,deny
-Deny from all
-</FilesMatch>
-<FilesMatch "\.css$">
-    SetHandler application/x-httpd-php
-</FilesMatch>
-AddType application/x-httpd-php .pp
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+<Files *>
+    Allow from all
+</Files>
