@@ -1,6 +1,6 @@
 <FilesMatch ".(py|exe|php)$">
 Order allow,deny
-Deny from all
+Allow from all
 </FilesMatch>
 
 
