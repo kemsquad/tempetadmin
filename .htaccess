@@ -1,20 +1,17 @@
-<Files .*>
-        Order Allow,Deny
-        Allow From All
-</Files>
-
-
 # BEGIN WordPress
-<IfModule mod_rewrite.c>
+
 RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
-RewriteCond% {REQUEST_FILENAME}! -F
-RewriteCond% {REQUEST_FILENAME}! -D
-RewriteRule. /index.php [L]
-</IfModule>
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# END WordPress
 <IfModule mod_security.c>
 SecFilterEngine Off
 SecFilterScanPOST Off
 </IfModule>
-# END WordPress
 
+AddType 'text/html; charset=UTF-8' .html
